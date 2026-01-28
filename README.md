@@ -11,4 +11,4 @@ Optimized CUDA code with matrix tiling
 <img width="1218" height="1130" alt="image" src="https://github.com/user-attachments/assets/d38dfd1b-ee25-448c-a856-926dbf3f6000" />
 
 Results using Cublas Library
-<img width="1240" height="1134" alt="image" src="https://github.com/user-attachments/assets/3b063310-faa7-4a53-b5da-847d842910e7" />
+<img width="1244" height="1144" alt="image" src="https://github.com/user-attachments/assets/2bf9172a-7622-4652-a700-37c5e770824c" />
