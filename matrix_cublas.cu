@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 
   //dim3 block(16,16);
   //dim3 grid((N+15)/16, (N+15)/16);
-  float alpha = 2.0f;
+  float alpha = 0.0f;
   float beta = 0.0f;
 	clock_t start = clock();
 	cublasSgemm(handle, CUBLAS_OP_N, CUBLAS_OP_N, N, N, N, &alpha, dB, N, dA, N, &beta, dC, N);
