@@ -30,7 +30,7 @@ for M in range(512,3584,512):
     print(f"Python call to CUDA library completed in {end - start:.8f} seconds")
 
 plt.plot(Ns, times, marker="o")
-plt.xlabel("N")
+plt.xlabel("M")
 plt.ylabel("Runtime (seconds)")
 plt.title("Matrix CPU Runtime")
 plt.grid(True)
