@@ -24,7 +24,7 @@ for M in range(512,3584,512):
     print(f"M={M}, N ={N}, time={t} s")
 
 plt.plot(Ns, times, marker="o")
-plt.xlabel("N")
+plt.xlabel("M")
 plt.ylabel("Runtime (seconds)")
 plt.title("Matrix CPU Runtime")
 plt.grid(True)
