@@ -3,8 +3,6 @@
 
 #define TILE_WIDTH 16
 
-// VALID 2D convolution (correlation): no filter flip
-// A: MxM, B: NxN, C: out x out where out = M-N+1
 __global__ void conv2dCuda(const float *A, const float *B, float *C, int M, int N) {
     int out = M - N + 1;
 
@@ -28,14 +26,10 @@ __global__ void conv2dCuda(const float *A, const float *B, float *C, int M, int 
     }
 }
 
-// Exposed C function for Python (ctypes)
-// h_A: host input image (MxM, flattened row-major)
-// h_B: host filter (NxN, flattened row-major)
-// h_C: host output (out*out, flattened), where out = M-N+1
+
 extern "C" void gpu_matrix_convolve(const float *h_A, const float *h_B, float *h_C, int M, int N) {
     int out = M - N + 1;
     if (out <= 0) {
-        // invalid sizes; nothing to do
         return;
     }
 
